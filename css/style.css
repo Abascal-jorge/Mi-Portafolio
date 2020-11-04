@@ -44,6 +44,7 @@ p{
     background-image: url(../img/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -98,9 +99,45 @@ p{
     }
 }
 
+/*Portafolio*/
+.elemento {
+    border-bottom: 1px solid black;
+    margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px){
+    .listado {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        grid-auto-rows: max-content;
+    }
+    .elemento{
+        border: none;
+    }
+    .elemento:nth-child(3){
+        grid-row-end: span 2;
+    }
+}
+
+/*Footer*/
+.footer{
+    background-image: url("../img/contacto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.widget{
+    color: var(--claro);
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
 
 
-
-
-
-
+@media screen and (min-width:768px){
+    .footer .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 30%) auto;
+    }
+}
